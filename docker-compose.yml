@@ -1,0 +1,12 @@
+services:
+  bedrock:
+    build: .
+    environment:
+      - AWS_PROFILE=${AWS_PROFILE}
+      - AWS_REGION=us-east-1
+    volumes:
+      - ~/.aws:/root/.aws:ro
+      - ./:/app
+    command: tail -f /dev/null
+    ports:
+      - "8503:8503"
