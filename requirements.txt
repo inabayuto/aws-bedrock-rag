@@ -1,0 +1,5 @@
+boto3
+awscli 
+numpy 
+faiss-cpu
+streamlit
